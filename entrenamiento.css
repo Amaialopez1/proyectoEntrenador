@@ -1,0 +1,214 @@
+/* Estilos generales */
+body {
+    background-image: url('../img/training1.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: #282e5c;
+}
+
+.header {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #463daf;
+}
+
+.navigation a {
+    color: rgb(229, 226, 255);
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: orange;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s;
+}
+
+.navigation a:hover::after {
+    width: 100%;
+}
+
+.sign-in {
+    background-color: orange;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.sign-in:hover {
+    background-color: #e03b3b;
+}
+
+.training-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    width: 80%;
+    max-width: 1200px;
+    background-color: #282e5c;
+    border-radius: 50px;
+    padding: 50px;
+    color: rgb(227, 221, 255);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.exercise-button {
+    background-color: #ff6565;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 10px;
+    font-size: 1em;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+.exercise-button:hover {
+    background-color: #e03b3b;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    animation: fadeIn 0.5s;
+}
+
+.modal-content {
+    background-color: #282e5c;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 20px;
+    animation: slideIn 0.5s;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-body {
+    text-align: center;
+    color: rgb(227, 221, 255);
+}
+
+.modal-body img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    margin: 20px 0;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.timer {
+    margin-top: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.timer button {
+    background-color: #ff6565;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.timer button:hover {
+    background-color: #e03b3b;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes slideIn {
+    from {transform: translateY(-50px);}
+    to {transform: translateY(0);}
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 1.2em;
+    color: rgb(206, 201, 255);
+    animation: fadeIn 2s ease-in-out;
+}
+
+.footer div {
+    margin: 0;
+    text-align: center;
+}
+
+img{
+    padding: 3%;
+}
